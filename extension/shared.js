@@ -112,5 +112,18 @@ globalThis.CF = (() => {
     return data;
   }
 
-  return { KEY, COLORS, freshState, extractVariables, substitute, assemble, uid, load, save, activeProfile, parseImport };
+  // Export to global scope
+window.CF = { 
+  KEY, 
+  COLORS, 
+  freshState, 
+  extractVariables, 
+  substitute, 
+  assemble, 
+  uid, 
+  load, 
+  save, 
+  activeProfile, 
+  parseImport 
+};
 })();
