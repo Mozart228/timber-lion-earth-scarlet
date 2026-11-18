@@ -4,6 +4,7 @@
 // The CF object is defined in shared.js which is loaded globally
 
 // Initialize storage with default state if not exists
+import './shared.js';
 chrome.storage.local.get(CF.KEY, (res) => {
   if (!res[CF.KEY]) {
     chrome.storage.local.set({ [CF.KEY]: CF.freshState() });
